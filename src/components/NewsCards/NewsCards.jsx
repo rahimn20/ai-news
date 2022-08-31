@@ -4,7 +4,7 @@ import { Grid, Grow, Typography } from "@material-ui/core";
 import useStyles from "./styles";
 
 const infoCards = [
-  { color: "#90B8F8", title: "Latest News", text: "Give me the latest news" },
+  { color: "#90B8F8", title: "AI News App", text: "Made with 🧡 by Rahim" },
   {
     color: "#5F85DB",
     title: "News by Categories",
@@ -37,7 +37,7 @@ function NewsCards({ articles, activeArticle }) {
           alignItems="stretch"
           spacing={3}
         >
-          {infoCards.map((infoCard) => (
+          {infoCards.map((infoCard, i) => (
             <Grid
               item
               xs={12}
@@ -59,7 +59,12 @@ function NewsCards({ articles, activeArticle }) {
                   </Typography>
                 ) : null}
                 <Typography variant="h6">
-                  Try saying: <br />
+                  {i !== 0 && (
+                    <>
+                      {" "}
+                      Try saying: <br />{" "}
+                    </>
+                  )}
                   {infoCard.text}
                 </Typography>
               </div>
