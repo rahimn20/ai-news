@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import useStyles from "./styles";
-import classNames from "classnames";
+// import classNames from "classnames";
 
 function NewsCard({
   article: { description, publishedAt, source, title, url, urlToImage },
